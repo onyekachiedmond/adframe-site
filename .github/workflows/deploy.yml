@@ -30,7 +30,7 @@ jobs:
 
       - name: Get the site files
         if: steps.check.outputs.ready == 'true'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Deploy to Cloudflare
         if: steps.check.outputs.ready == 'true'
@@ -38,4 +38,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "4.166.0"
           command: deploy
