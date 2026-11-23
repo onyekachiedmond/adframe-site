@@ -1,0 +1,8 @@
+{
+  // AdFrame website: a static site served from the "public" folder
+  "name": "adframe",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public"
+  }
+}
